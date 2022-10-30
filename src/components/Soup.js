@@ -5,8 +5,10 @@ function Soup(props){
   return (
     <React.Fragment>
       <div onClick = {() => props.whenSoupClicked(props.id)}>
-        <h3>{props.location} - {props.names}</h3>
-        <p><em>{props.issue}</em></p>
+        <h2>Soup Type: {props.name}</h2>
+        <h2>Main Ingredients: {props.mainIngredients}</h2>
+        <h2>Calories: {props.calories}</h2>
+        <h2>Bowls remaining: {props.remainingBowls}</h2>
         <hr/>
       </div>
     </React.Fragment>
@@ -14,9 +16,10 @@ function Soup(props){
 }
 
 Soup.propTypes = {
-  names: PropTypes.string.isRequired,
-  location: PropTypes.string.isRequired,
-  issue: PropTypes.string,
+  name: PropTypes.string.isRequired,
+  mainIngredients: PropTypes.string,
+  calories: PropTypes.number,
+  remainingBowls: PropTypes.number,
   id: PropTypes.string,
   whenSoupClicked: PropTypes.func
 };
