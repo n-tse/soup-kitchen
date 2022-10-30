@@ -9,9 +9,10 @@ function SoupList(props) {
       {props.soupList.map((soup) =>
         <Soup 
           whenSoupClicked = { props.onSoupSelection }
-          names={soup.names}
-          location={soup.location}
-          issue={soup.issue}
+          name={soup.name}
+          mainIngredients={soup.mainIngredients}
+          calories={soup.calories}
+          remainingBowls={soup.remainingBowls}
           id={soup.id}
           key={soup.id} />
       )}
