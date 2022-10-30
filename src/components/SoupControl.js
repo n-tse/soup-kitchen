@@ -3,6 +3,7 @@ import NewSoupForm from './NewSoupForm';
 import SoupList from './SoupList';
 import SoupDetail from './SoupDetail';
 import EditSoupForm from './EditSoupForm';
+import { v4 } from "uuid";
 
 class SoupControl extends React.Component {
 
@@ -10,7 +11,22 @@ class SoupControl extends React.Component {
     super(props);
     this.state = {
       formVisibleOnPage: false,
-      mainSoupList: [],
+      mainSoupList: [
+        {
+          name: "Tomato Soup",
+          mainIngredients: "Tomato, cream, garlic",
+          calories: 75,
+          remainingBowls: 130,
+          id: v4()
+        },
+        {
+          name: "Chicken Noodle Soup",
+          mainIngredients: "Chicken, bouillon, onion",
+          calories: 100,
+          remainingBowls: 130,
+          id: v4()
+        }
+      ],
       selectedSoup: null,
       editing: false
     };
