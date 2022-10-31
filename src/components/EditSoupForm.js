@@ -7,7 +7,7 @@ function EditSoupForm (props) {
 
   function handleEditSoupFormSubmission(event) {
     event.preventDefault();
-    props.onEditSoup({names: event.target.names.value, location: event.target.location.value, issue: event.target.issue.value, id: soup.id});
+    props.onEditSoup({name: event.target.name.value, mainIngredients: event.target.mainIngredients.value, calories: event.target.calories.value, remainingBowls: event.target.remainingBowls, id: soup.id});
   }
 
   return (
