@@ -83,10 +83,12 @@ class SoupControl extends React.Component {
       });
   }
 
-  handleScoopQuantityUpdate(id) {
+  handleScoopQuantityUpdate = (id) => {
     const soupSelection = this.state.mainSoupList.filter(soup => soup.id === id)[0];
     const soupLeft = this.state.mainSoupList.filter(soup => soup.id !== soupSelection); 
+    if (soupSelection.remainingBowls > 0) {
     soupSelection.remainingBowls = soupSelection.remainingBowls - 1; 
+    }
     const newMainSoupList = soupLeft; 
     this.setState({
       mainSoupList: newMainSoupList,
