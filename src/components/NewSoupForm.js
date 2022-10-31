@@ -11,7 +11,7 @@ function NewSoupForm(props){
       name: event.target.name.value, 
       mainIngredients: event.target.mainIngredients.value, 
       calories: event.target.calories.value, 
-      remaingingBowls: event.target.remaingingBowls.value,
+      remainingBowls: event.target.remainingBowls.value,
       id: v4()
     });
   }
