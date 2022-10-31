@@ -8,9 +8,10 @@ function NewSoupForm(props){
   function handleNewSoupFormSubmission(event) {
     event.preventDefault();
     props.onNewSoupCreation({
-      names: event.target.names.value, 
-      location: event.target.location.value, 
-      issue: event.target.issue.value, 
+      name: event.target.name.value, 
+      mainIngredients: event.target.mainIngredients.value, 
+      calories: event.target.calories.value, 
+      remaingingBowls: event.target.remaingingBowls.value,
       id: v4()
     });
   }
@@ -19,7 +20,7 @@ function NewSoupForm(props){
     <React.Fragment>
       <ReusableForm 
         formSubmissionHandler={handleNewSoupFormSubmission}
-        buttonText="Help!" />
+        buttonText="Add new soup" />
     </React.Fragment>
   );
 }
