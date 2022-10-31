@@ -10,8 +10,7 @@ function SoupDetail(props){
       <h3>Soup Type: {props.name}</h3>
       <h3>Main Ingredients: {props.mainIngredients}</h3>
       <h3>Calories: {props.calories}</h3>
-      <h3>{soup.location} - {soup.names}</h3>
-      <p><em>{soup.issue}</em></p>
+      <h3>Bowls Remaining: {props.remaingingBowls}</h3>
       <button onClick={ props.onClickingEdit }>Update Soup</button>
       <button onClick={()=> onClickingDelete(soup.id) }>Close Soup</button>
       <hr/>

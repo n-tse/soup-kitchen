@@ -123,8 +123,6 @@ class SoupControl extends React.Component {
       </React.Fragment>
     );
   }
-
-
 }
 
 export default SoupControl;
