@@ -16,6 +16,9 @@
 
 The project is a React application that allows a vistor to view the various kinds of soups available an imaginary soup kitchen. The user is able to view the soup's main ingredients, calories, and the number of remaining scoops. Additionally, they can create, update, or delete existing soups using the available buttons. The number of scoops of soup remaining cannot be less than 0.
 
+## Component Diagram
+!(src/image/SoupKitchenDiagram.drawio.png))
+
 ## Setup/Installation Requirements
 
 * _Clone repository from GitHub_
