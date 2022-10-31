@@ -9,6 +9,7 @@ function SoupList(props) {
       {props.soupList.map((soup) =>
         <Soup 
           whenSoupClicked = { props.onSoupSelection }
+          whenScoopClicked = { props.onScoopSelection }
           name={soup.name}
           mainIngredients={soup.mainIngredients}
           calories={soup.calories}
@@ -22,7 +23,8 @@ function SoupList(props) {
 
 SoupList.propTypes = {
   soupList: PropTypes.array,
-  onSoupSelection: PropTypes.func
+  onSoupSelection: PropTypes.func,
+  onScoopSelection: PropTypes.func
 };
 
 export default SoupList;

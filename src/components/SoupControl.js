@@ -83,6 +83,18 @@ class SoupControl extends React.Component {
       });
   }
 
+  handleScoopQuantityUpdate(id) {
+    const soupSelection = this.state.mainSoupList.filter(soup => soup.id === id)[0];
+    const soupLeft = this.state.mainSoupList.filter(soup => soup.id !== soupSelection); 
+    soupSelection.remainingBowls = soupSelection.remainingBowls - 1; 
+    const newMainSoupList = soupLeft; 
+    this.setState({
+      mainSoupList: newMainSoupList,
+      editing: false, 
+      selectedSoup: null
+    });
+  }
+
   render(){
     let currentlyVisibleState = null;
     let buttonText = null; 
@@ -101,7 +113,7 @@ class SoupControl extends React.Component {
       currentlyVisibleState = <NewSoupForm onNewSoupCreation={this.handleAddingNewSoupToList} />;
       buttonText = "Return to Soup List"; 
     } else {
-      currentlyVisibleState = <SoupList soupList={this.state.mainSoupList} onSoupSelection={this.handleChangingSelectedSoup} />;
+      currentlyVisibleState = <SoupList soupList={this.state.mainSoupList} onSoupSelection={this.handleChangingSelectedSoup} onScoopSelection={this.handleScoopQuantityUpdate} />;
       buttonText = "Add Soup"; 
     }
     return (

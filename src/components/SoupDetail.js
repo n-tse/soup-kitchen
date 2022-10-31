@@ -7,6 +7,9 @@ function SoupDetail(props){
   return (
     <React.Fragment>
       <h1>Soup Detail</h1>
+      <h3>Soup Type: {props.name}</h3>
+      <h3>Main Ingredients: {props.mainIngredients}</h3>
+      <h3>Calories: {props.calories}</h3>
       <h3>{soup.location} - {soup.names}</h3>
       <p><em>{soup.issue}</em></p>
       <button onClick={ props.onClickingEdit }>Update Soup</button>
