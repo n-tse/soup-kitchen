@@ -12,7 +12,7 @@ function SoupDetail(props){
       <h3>Calories: {soup.calories}</h3>
       <h3>Bowls Remaining: {soup.remainingBowls}</h3>
       <button onClick={ props.onClickingEdit }>Update Soup</button>
-      <button onClick={()=> onClickingDelete(soup.id) }>Close Soup</button>
+      <button onClick={()=> onClickingDelete(soup.id) }>Remove Soup</button>
       <hr/>
     </React.Fragment>
   );
